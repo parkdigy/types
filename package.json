@@ -1,5 +1,5 @@
 {
-  "name": "npm-template",
+  "name": "@pdg/types",
   "title": "NPM Template Module",
   "version": "1.0.0",
   "description": "API Module",
@@ -9,20 +9,20 @@
   "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parkdigy/npm-template.git",
-    "baseUrl": "https://github.com/parkdigy/npm-template"
+    "url": "git+https://github.com/parkdigy/types.git",
+    "baseUrl": "https://github.com/parkdigy/types"
   },
   "bugs": {
-    "url": "https://github.com/parkdigy/npm-template/issues"
+    "url": "https://github.com/parkdigy/types/issues"
   },
-  "homepage": "https://github.com/parkdigy/npm-template#readme",
+  "homepage": "https://github.com/parkdigy/types#readme",
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
     "dev": "cd examples && npm run dev",
-    "build": "npm run test && npm run lint && rollup -c --bundleConfigAsCjs",
+    "build": "npm run test && npm run lint && tsc",
     "pub": "npm i && npm run build && npm publish --access=public && rm ./.git/hooks/pre-commit",
     "lint": "eslint './src/**/*.ts'",
     "reinstall-module": "rm -rf node_modules && rm -f package-lock.json && npm i",
