@@ -1,7 +1,7 @@
 {
   "name": "@pdg/types",
-  "title": "NPM Template Module",
-  "description": "NPM Template Module",
+  "title": "Typescript Types",
+  "description": "Typescript Types",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
