@@ -2,7 +2,7 @@
   "name": "@pdg/types",
   "title": "Typescript Types",
   "description": "Typescript Types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
