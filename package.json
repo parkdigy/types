@@ -1,8 +1,8 @@
 {
   "name": "@pdg/types",
   "title": "NPM Template Module",
+  "description": "NPM Template Module",
   "version": "1.0.0",
-  "description": "API Module",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
