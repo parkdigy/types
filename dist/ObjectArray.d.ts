@@ -9,3 +9,4 @@ export type ObjectMerge<T> = {
     [K in keyof T]: T[K];
 };
 export type ArrayMerge<A extends any[]> = A extends [infer T, ...infer R] ? T & ArrayMerge<R> : unknown;
+export type FlattenArray<T extends readonly (readonly any[])[]> = T extends readonly (infer InnerArray)[] ? InnerArray extends readonly (infer Element)[] ? Element : never : never;
