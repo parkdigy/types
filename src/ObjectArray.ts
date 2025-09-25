@@ -9,8 +9,13 @@ export type IsArray<T> = T extends unknown[] ? true : false;
 export type ObjectMerge<T> = { [K in keyof T]: T[K] };
 export type ArrayMerge<A extends any[]> = A extends [infer T, ...infer R] ? T & ArrayMerge<R> : unknown;
 
-export type FlattenArray<T extends readonly (readonly any[])[]> = T extends readonly (infer InnerArray)[]
-  ? InnerArray extends readonly (infer Element)[]
-    ? Element
-    : never
-  : never;
+export type FlattenArray<T> =
+  T extends ReadonlyArray<infer U>
+    ? U extends ReadonlyArray<any>
+      ? FlattenArray<U>
+      : U extends string
+        ? U
+        : never
+    : T extends string
+      ? T
+      : never;
