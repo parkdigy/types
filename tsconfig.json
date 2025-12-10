@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "ES2017",
+    "module": "ESNext",
     "types": ["node", "jest"],
+    "lib": ["DOM", "DOM.Iterable", "ES2017"],
     "moduleResolution": "node",
     "declaration": true,
     "declarationDir": "dist",
