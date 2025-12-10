@@ -1,6 +1,6 @@
 # @pdg/npm-template
 
-NPM Template Module
+NPM Template
 
 ## 설치
 ```
