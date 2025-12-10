@@ -1,7 +1,7 @@
 {
   "name": "@pdg/npm-template",
-  "title": "NPM Template Module",
-  "description": "NPM Template Module",
+  "title": "NPM Template",
+  "description": "NPM Template",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
