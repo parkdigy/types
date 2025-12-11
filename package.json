@@ -2,7 +2,7 @@
   "name": "@pdg/types",
   "title": "Typescript Types",
   "description": "Typescript Types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -30,7 +30,7 @@
   "scripts": {
     "dev": "cd examples && npm run dev",
     "watchman:del": "watchman watch-del \"${PWD}\" ; watchman watch-project \"${PWD}\"",
-    "build": "npm run watchman:del && npm run test && npm run lint && rollup -c --bundleConfigAsCjs",
+    "build": "npm run watchman:del && npm run test && npm run lint && tsc",
     "git:commit": "node .git-commit.cjs",
     "git:push": "git push",
     "git:commit:push": "npm run git:commit && npm run git:push",
