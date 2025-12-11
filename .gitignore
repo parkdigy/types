@@ -1,3 +1,6 @@
+# 최종 프로젝트에서는 dist 주석 처리
+dist
+
 node_modules
 *.log
 .idea
