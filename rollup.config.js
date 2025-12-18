@@ -24,7 +24,7 @@ const getConfig = () => ({
     del({ targets: 'dist/*' }),
     peerDepsExternal(),
     typescript({ useTsconfigDeclarationDir: true }),
-    resolve(),
+    resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
     commonjs({
       include: /node_modules/,
     }),
