@@ -23,11 +23,14 @@ const getConfig = () => ({
   plugins: [
     del({ targets: 'dist/*' }),
     peerDepsExternal(),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      check: false, // 타입 체크는 package.json의 build 스크립트에서 별도로 수행
+    }),
     resolve(),
     commonjs({
       include: /node_modules/,
     }),
-    typescript({ useTsconfigDeclarationDir: true }),
     // *.private 디렉토리, *.private.d.ts 파일 제거
     {
       name: 'remove-d-ts-plugin',

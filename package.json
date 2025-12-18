@@ -30,7 +30,7 @@
   "scripts": {
     "dev": "cd examples && npm run dev",
     "watchman:del": "watchman watch-del \"${PWD}\" ; watchman watch-project \"${PWD}\"",
-    "build": "npm run watchman:del && npm run test && npm run lint && rollup -c --bundleConfigAsCjs",
+    "build": "npm run watchman:del && npm run test && npm run tsc && npm run lint && rollup -c --bundleConfigAsCjs",
     "git:commit": "node .git-commit.cjs",
     "git:push": "git push",
     "git:commit:push": "npm run git:commit && npm run git:push",
@@ -38,6 +38,7 @@
     "reset:gitignore": "git rm -r --cached . && git add .",
     "pub": "npm i && npm run build && npm publish --access=public && rm ./.git/hooks/pre-commit",
     "lint": "eslint './src/**/*.ts'",
+    "tsc": "tsc --noEmit",
     "reinstall": "npm run reinstall:module",
     "reinstall:module": "rm -rf node_modules && rm -f package-lock.json && npm i",
     "test": "jest"
