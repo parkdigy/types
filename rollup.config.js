@@ -23,10 +23,7 @@ const getConfig = () => ({
   plugins: [
     del({ targets: 'dist/*' }),
     peerDepsExternal(),
-    typescript({
-      useTsconfigDeclarationDir: true,
-      check: false, // 타입 체크는 package.json의 build 스크립트에서 별도로 수행
-    }),
+    typescript({ useTsconfigDeclarationDir: true }),
     resolve(),
     commonjs({
       include: /node_modules/,
