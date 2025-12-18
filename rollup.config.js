@@ -2,6 +2,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
+import eslint from '@rollup/plugin-eslint';
 import del from 'rollup-plugin-delete';
 import fs from 'fs';
 import path from 'path';
@@ -23,6 +24,12 @@ const getConfig = () => ({
   plugins: [
     del({ targets: 'dist/*' }),
     peerDepsExternal(),
+    eslint({
+      throwOnError: true,
+      throwOnWarning: true,
+      include: ['src/**'],
+      exclude: ['node_modules/**', 'dist/**', 'examples/**', 'test/**'],
+    }),
     typescript({ useTsconfigDeclarationDir: true }),
     resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
     commonjs({
