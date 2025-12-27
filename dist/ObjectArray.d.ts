@@ -13,3 +13,9 @@ export type MutableArray<T> = {
     -readonly [P in keyof T]: T[P];
 };
 export type FlattenArray<T> = T extends ReadonlyArray<infer U> ? U extends ReadonlyArray<any> ? FlattenArray<U> : U extends string ? U : never : T extends string ? T : never;
+export type Prettify<T> = {
+    [K in keyof T]: T[K];
+} & {};
+export type Writable<T> = {
+    -readonly [P in keyof T]: T[P];
+};

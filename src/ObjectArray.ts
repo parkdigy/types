@@ -23,3 +23,7 @@ export type FlattenArray<T> =
     : T extends string
       ? T
       : never;
+
+export type Prettify<T> = { [K in keyof T]: T[K] } & {};
+
+export type Writable<T> = { -readonly [P in keyof T]: T[P] };
