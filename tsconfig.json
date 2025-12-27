@@ -12,6 +12,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "preserveSymlinks": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "outDir": "dist",
