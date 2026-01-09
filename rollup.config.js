@@ -50,7 +50,9 @@ const getConfig = () => ({
                 removeFromDir(filePath);
               }
             } else {
-              filePath.endsWith('.private.d.ts') && fs.unlinkSync(filePath);
+              if (filePath.endsWith('.private.d.ts')) {
+                fs.unlinkSync(filePath);
+              }
             }
           });
         };
