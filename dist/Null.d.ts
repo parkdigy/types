@@ -1,4 +1,4 @@
-import { ValueOf } from './ObjectArray';
+import { type ValueOf } from './ObjectArray';
 export type NullableKeys<T> = ValueOf<{
     [K in keyof T]: Exclude<T[K], NonNullable<T[K]>> extends never ? never : K;
 }>;

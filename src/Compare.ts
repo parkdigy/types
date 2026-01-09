@@ -1,4 +1,4 @@
-import { Arr, Dict } from './ObjectArray';
+import { type Arr, type Dict } from './ObjectArray';
 
 export type InValue<T, TValue> = Extract<T, TValue> extends never ? false : true;
 
